@@ -8,6 +8,8 @@ export default function helloAPI(req, res) {
     Price: "₹12,338",
     Yield: "9.14%",
     RetTar: "18.1%",
-    FunSta:"20"
+    FunStac1: "20",
+    FunStac0: "0"
+    
   })
 }

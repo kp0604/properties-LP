@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Card1 from "../comps/card1"
-import Card0 from "../comps/card0"
-
+import Card1 from "../comps/card1";
+import Card0 from "../comps/card0";
 
 export const getStaticProps = async () => {
   const res = await fetch(`http://localhost:3000/api/hello`);
@@ -10,24 +9,23 @@ export const getStaticProps = async () => {
   return { props: { data } };
 };
 
-
-export default function Home({ data}) {
+export default function Home({ data }) {
   return (
-    <div className="bg-gray-400 flex flex-col items-center h-auto ">
+    <div
+      className="flex flex-col bg-gray-200 items-center relative "
+      style={{ fontFamily: "THICCCBOI-regular" }}
+    >
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div
-        className="bg-green-900 w-screen absolute top-0"
-        style={{ height: "578px" }}
+        className="bg-teal w-screen absolute inset-0"
+        style={{ height: "550px" }}
       ></div>
 
-      <span
-        className="text-white text-2xl  absolute font-bold "
-        style={{ top: "80px" }}
-      >
+      <span className="text-white text-2xl font-bold md:top-16 md:-left-5 top-5 -left-24 absolute">
         <svg
           width="290"
           height="581"
@@ -98,36 +96,42 @@ export default function Home({ data}) {
         </svg>
       </span>
 
-      <span
-        className="text-white text-4xl  absolute font-bold "
-        style={{ top: "240px" }}
-      >
-        All Properties
-      </span>
+      <div className="container md:px-16 px-6 flex flex-col md:mt-52 mt-36">
+        <span
+          className="text-white md:text-5xl text-4xl  z-10 font-bold"
+          // className="text-white text-6xl  absolute font-bold left-28"
+          // style={{ fontFamily: "THICCCBOI-regular" }}
+        >
+          All properties
+        </span>
 
-      <Card0 data={data} />
+        <Card0 data={data} />
 
-      <span
-        className="text-black text-4xl  absolute font-bold "
-        style={{ top: "800px" }}
-      >
-        Past Properties
-      </span>
+        <span
+          className="text-black md:text-6xl text-4xl  z-10 mt-14 font-bold"
+          // className="text-black text-6xl  absolute font-bold left-28"
+          // style={{ top: "1100px" }}
+          style={{ fontFamily: "THICCCBOI-regular" }}
+        >
+          Past properties
+        </span>
 
-      <div
-        class="md:w-5/6 grid grid-flow-col md:grid-cols-3 grid-cols-1 md:grid-rows-2  grid-rows-6  gap-10 my-10 absolute"
-        style={{ top: "860px" }}
-      >
-        <Card1 data={data} />
-        <Card1 data={data} />
-        <Card1 data={data} />
-        <Card1 data={data} />
-        <Card1 data={data} />
-        <Card1 data={data} />
+        <div
+          class=" grid grid-flow-col md:grid-cols-3 grid-cols-1 md:grid-rows-2  grid-rows-6  gap-8 my-10 z-10 mt-16"
+          // class="md:w-5/6 grid grid-flow-col md:grid-cols-3 grid-cols-1 md:grid-rows-2  grid-rows-6  gap-10 my-10 absolute"
+          // style={{ top: "990px" }}
+        >
+          <Card1 data={data} />
+          <Card1 data={data} />
+          <Card1 data={data} />
+          <Card1 data={data} />
+          <Card1 data={data} />
+          <Card1 data={data} />
+        </div>
+        {/* <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+          <h1 className="text-5xl">Next.js</h1>
+        </main> */}
       </div>
-      {/* <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-5xl">Next.js</h1>
-      </main> */}
     </div>
   );
 }

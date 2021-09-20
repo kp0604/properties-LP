@@ -1,9 +1,43 @@
+@font-face {
+  font-family: "THICCCBOI-black";
+  src: url("../Webfont/THICCCBOI-Black.woff2") format('woff2');
+}
+@font-face {
+  font-family: "THICCCBOI-bold";
+  src: url("../Webfont/THICCCBOI-Bold.woff2") format('woff2');
+}
+@font-face {
+  font-family: "THICCCBOI-extrabold";
+  src: url("../Webfont/THICCCBOI-ExtraBold.woff2") format('woff2');
+}
+@font-face {
+  font-family: "THICCCBOI-light";
+  src: url("../Webfont/THICCCBOI-light.woff2") format('woff2');
+}
+@font-face {
+  font-family: "THICCCBOI-regular";
+  src: url("../Webfont/THICCCBOI-Regular.woff2") format('woff2');
+}
+@font-face {
+  font-family: "THICCCBOI-semibold";
+  src: url("../Webfont/THICCCBOI-SemiBold.woff2") format('woff2');
+}
+@font-face {
+  font-family: "THICCCBOI-thicccaf";
+  src: url("../Webfont/THICCCBOI-ThicccAF.woff2") format('woff2');
+}
+@font-face {
+  font-family: "THICCCBOI-thin";
+  src: url("../Webfont/THICCCBOI-Thin.woff2") format('woff2');
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
 }
 
 a {
@@ -13,4 +47,15 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.bg-teal{background: rgba(15, 82, 75, 1);
+;}
+
+.text-teal{color: rgba(15, 82, 75, 1);
+}
+.bor-teal{border-color: rgba(15, 82, 75, 1);
+}
+
+.bg-yeal{background: rgba(203, 145, 44, 1);
 }

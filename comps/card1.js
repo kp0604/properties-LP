@@ -4,18 +4,21 @@ import React from "react";
 const Card1 = ({ data }) => {
   // console.log(props.data)
   return (
-    <div className="bg-white grid-start-1 grid-end-1 flex flex-col rounded-xl w-80 " >
+    <div
+      className="bg-white grid-start-1 grid-end-1 flex flex-col rounded-xl w-80 relative md:w-full"
+      // style={{ fontFamily: "THICCCBOI-regular" }}
+    >
       <img
         src="buil.jpg"
         alt="img"
-        className=" sm:h-52 h-52 sm:w-96 rounded-t-xl"
+        className=" sm:h-60 h-60 sm:w-96 rounded-t-xl"
       ></img>
 
       <span
-        className="absolute inset-0 z-10  top-8 left-4 bg-green-700 text-white 
+        className="absolute z-10  top-8 left-4 bg-teal text-white 
       text-sm text-center rounded-2xl w-24 h-8 p-2 "
       >
-        {data.FunSta !== "0" ? "FUNDED" : "NOT FUNDED"}
+        {data.FunStac1 !== "0" ? "FUNDED" : "ACTIVE"}
       </span>
 
       <div className=" w-full p-6  flex flex-col ">
@@ -47,50 +50,45 @@ const Card1 = ({ data }) => {
           {data.Address}
         </span>
         {/* <div className="flex flex-wrap "> */}
-          <div className="flex w-full justify-between">
-            <div className=" bg-gray-300 rounded-xl my-4 w-44">
-              <div className="border-green-800  border-4 rounded-xl w-20" style={{width:`${data.Funsta}%`}}></div>
-            </div>
-
-            <span className="text-green-800 pl-2 py-2 text-sm font-bold">
-              {data.FunSta}% funded
-            </span>
+        <div className="flex w-full justify-between">
+          <div className=" bg-gray-300 rounded-xl my-4 w-44">
+            <div
+              className="bor-teal  border-4 rounded-xl w-20"
+              style={{ width: `${data.Funsta}%` }}
+            ></div>
           </div>
 
-          <div className="flex justify-between">
-            <span className=" py-2 text-sm">Area</span>
-            <span className="  py-2 text-sm font-bold">{data.Area}</span>
-          </div>
+          <span className="text-teal pl-2 py-2 text-sm font-bold">
+            {data.FunSta}% funded
+          </span>
+        </div>
 
-          <hr />
+        <div className="flex justify-between border-b-2 border-gray-200">
+          <span className=" py-2 text-sm">Area</span>
+          <span className="  py-2 text-sm font-bold">{data.Area}</span>
+        </div>
 
-          <div className="flex justify-between">
-            <span className=" py-2 text-sm">Price psf</span>
-            <span className="  py-2 text-sm font-bold">{data.Price}</span>
-          </div>
+        <div className="flex justify-between border-b-2 border-gray-200">
+          <span className=" py-2 text-sm">Price psf</span>
+          <span className="  py-2 text-sm font-bold">{data.Price}</span>
+        </div>
 
-          <hr />
+        <div className="flex justify-between border-b-2 border-gray-200">
+          <span className=" py-2 text-sm">Yield</span>
+          <span className="  py-2 text-sm font-bold">{data.Yield}</span>
+        </div>
 
-          <div className="flex justify-between">
-            <span className=" py-2 text-sm">Yield</span>
-            <span className="  py-2 text-sm font-bold">{data.Yield}</span>
-          </div>
+        <div className="flex justify-between border-b-2 border-gray-200">
+          <span className=" py-2 text-sm">Return Target</span>
+          <span className="  py-2 text-sm font-bold">{data.RetTar}</span>
+        </div>
 
-          <hr />
-
-          <div className="flex justify-between">
-            <span className=" py-2 text-sm">Return Target</span>
-            <span className="  py-2 text-sm font-bold">{data.RetTar}</span>
-          </div>
-
-          <hr />
-
-          <div className="flex justify-between">
-            <span className=" py-2 text-sm">Funding Status</span>
-            <span className="  py-2 text-sm font-bold">{data.FunSta}%</span>
-          </div>
+        <div className="flex justify-between">
+          <span className=" py-2 text-sm">Funding Status</span>
+          <span className="  py-2 text-sm font-bold">{data.FunSta}%</span>
+        </div>
         {/* </div> */}
-        <button className="bg-green-700 text-white py-4 px-1 mt-6 rounded-xl flex justify-center items-center">
+        <button className="bg-teal text-white py-4 px-1 mt-6 rounded-xl flex justify-center items-center">
           View Opportunity{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"

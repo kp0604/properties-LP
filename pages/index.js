@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Card1 from "../comps/card1";
 import Card0 from "../comps/card0";
+import { server } from "../config"
 
 export const getStaticProps = async () => {
-  const res = await fetch(`http://localhost:3000/api/hello`);
+  const res = await fetch(`${server}/api/hello`);
   const data = await res.json();
   console.log(data);
   return { props: { data } };

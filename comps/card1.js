@@ -54,12 +54,12 @@ const Card1 = ({ data }) => {
           <div className=" bg-gray-300 rounded-xl my-4 w-44">
             <div
               className="bor-teal  border-4 rounded-xl w-20"
-              style={{ width: `${data.Funstac1}%` }}
+              // style={{ width: `${data.Funstac1}%` }}
             ></div>
           </div>
 
           <span className="text-teal pl-2 py-2 text-sm font-bold">
-            {data.FunSta}% funded
+            {data.FunStac1}% funded
           </span>
         </div>
 

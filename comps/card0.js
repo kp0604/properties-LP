@@ -47,7 +47,7 @@ const Card1 = ({ data }) => {
 
         <div className="flex w-full justify-between md:justify-start ">
           <div className=" bg-gray-300 rounded-xl my-4 w-44">
-            <div className="bor-teal  border-4 rounded-xl w-20"></div>
+            <div className="bor-teal  border-4 rounded-xl w-0"></div>
           </div>
 
           <span className="text-teal pl-2 md:pl-6 py-2 text-sm font-bold">

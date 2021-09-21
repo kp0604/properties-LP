@@ -58,7 +58,7 @@ const Card1 = ({ data }) => {
           </div>
 
           <span className="text-teal pl-2 md:pl-6 py-2 text-sm font-bold">
-            {data.FunSta}% funded
+            {data.FunStac0}% funded
           </span>
         </div>
 
@@ -93,7 +93,7 @@ const Card1 = ({ data }) => {
 
           <div className="flex justify-between md:w-60">
             <span className=" py-2 text-sm">Funding Status</span>
-            <span className="  py-2 text-sm font-bold">{data.FunSta}%</span>
+            <span className="  py-2 text-sm font-bold">{data.FunStac0}%</span>
           </div>
         </div>
         <button className="bg-yeal text-white py-4 px-1 mt-6 md:w-60 rounded-xl flex justify-center items-center">

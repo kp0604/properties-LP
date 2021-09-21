@@ -1,19 +1,12 @@
 import React from "react";
-// import styles from "./styles/Card.module.css";
 
 const Card1 = ({ data }) => {
-  // console.log(props.data)
   return (
-    <div
-      className="bg-white grid-start-1 grid-end-1 flex flex-col rounded-xl   sm:flex-row  z-10 relative mt-20 w-full"
-      //   className="bg-white grid-start-1 grid-end-1 flex flex-col rounded-xl w-80 absolute sm:flex-row sm:w-5/6 "
-      // style={{ top: "300px" }}
-    >
+    <div className="bg-white grid-start-1 grid-end-1 flex flex-col rounded-xl   sm:flex-row  z-10 relative mt-20 w-full">
       <img
         src="buil.jpg"
         alt="img"
         className="rounded-t-xl md:rounded-l-xl  h-60 md:h-96  md:w-5/6"
-        // style={{ height: "460px", width: "1000px" }}
       ></img>
 
       <span
@@ -51,7 +44,7 @@ const Card1 = ({ data }) => {
 
           {data.Address}
         </span>
-        {/* <div className="flex flex-wrap "> */}
+
         <div className="flex w-full justify-between md:justify-start ">
           <div className=" bg-gray-300 rounded-xl my-4 w-44">
             <div className="bor-teal  border-4 rounded-xl w-20"></div>
@@ -68,28 +61,20 @@ const Card1 = ({ data }) => {
             <span className="  py-2 text-sm font-bold">{data.Area}</span>
           </div>
 
-          {/* <hr /> */}
-
           <div className="flex justify-between md:w-60 border-b-2 border-gray-200">
             <span className=" py-2 text-sm">Price psf</span>
             <span className="  py-2 text-sm font-bold">{data.Price}</span>
           </div>
-
-          {/* <hr /> */}
 
           <div className="flex justify-between md:w-60 border-b-2 border-gray-200">
             <span className=" py-2 text-sm">Yield</span>
             <span className="  py-2 text-sm font-bold">{data.Yield}</span>
           </div>
 
-          {/* <hr /> */}
-
           <div className="flex justify-between md:w-60 border-b-2 border-gray-200">
             <span className=" py-2 text-sm">Return Target</span>
             <span className="  py-2 text-sm font-bold">{data.RetTar}</span>
           </div>
-
-          {/* <hr /> */}
 
           <div className="flex justify-between md:w-60">
             <span className=" py-2 text-sm">Funding Status</span>

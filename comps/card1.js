@@ -1,13 +1,8 @@
 import React from "react";
-// import styles from "./styles/Card.module.css";
 
 const Card1 = ({ data }) => {
-  // console.log(props.data)
   return (
-    <div
-      className="bg-white grid-start-1 grid-end-1 flex flex-col rounded-xl w-80 relative md:w-full"
-      // style={{ fontFamily: "THICCCBOI-regular" }}
-    >
+    <div className="bg-white grid-start-1 grid-end-1 flex flex-col rounded-xl w-80 relative md:w-full">
       <img
         src="buil.jpg"
         alt="img"
@@ -49,13 +44,10 @@ const Card1 = ({ data }) => {
 
           {data.Address}
         </span>
-        {/* <div className="flex flex-wrap "> */}
+
         <div className="flex w-full justify-between">
           <div className=" bg-gray-300 rounded-xl my-4 w-44">
-            <div
-              className="bor-teal  border-4 rounded-xl w-20"
-              // style={{ width: `${data.Funstac1}%` }}
-            ></div>
+            <div className="bor-teal  border-4 rounded-xl w-20"></div>
           </div>
 
           <span className="text-teal pl-2 py-2 text-sm font-bold">

@@ -1,34 +1,17 @@
 import Head from "next/head";
 import Card1 from "../comps/card1";
 import Card0 from "../comps/card0";
-import { server } from "../config"
-// import {HOST} from '../process.env'
-// import useSWR from "/next/swr";
+import { server } from "../config";
 
-// // const { data, error } = useSWR("/api/index", fetcher);
-// function Profile() {
-
-//   if (error) return <div>failed to load</div>;
-//   if (!data) return <div>loading...</div>;
-//   return <div>hello {data.name}!</div>;
-// }
-
-// export const getStaticProps = async () => {
-//   const res = await fetch('/api/');
-//   const data = await res.json();
-//   console.log(data);
-  
-//   return { props: { data } };
-// };
 export const getServerSideProps = async () => {
   const res = await fetch(`${server}/api/hello`);
   const data = await res.json();
   console.log(data);
-  
+
   return { props: { data } };
 };
 
-export default function Home({data}) {
+export default function Home({ data }) {
   return (
     <div
       className="flex flex-col bg-gray-200 items-center relative "
@@ -116,11 +99,7 @@ export default function Home({data}) {
       </span>
 
       <div className="container md:px-16 px-6 flex flex-col md:mt-52 mt-36">
-        <span
-          className="text-white md:text-5xl text-4xl  z-10 font-bold"
-          // className="text-white text-6xl  absolute font-bold left-28"
-          // style={{ fontFamily: "THICCCBOI-regular" }}
-        >
+        <span className="text-white md:text-5xl text-4xl  z-10 font-bold">
           All properties
         </span>
 
@@ -128,18 +107,12 @@ export default function Home({data}) {
 
         <span
           className="text-black md:text-6xl text-4xl  z-10 mt-14 font-bold"
-          // className="text-black text-6xl  absolute font-bold left-28"
-          // style={{ top: "1100px" }}
           style={{ fontFamily: "THICCCBOI-regular" }}
         >
           Past properties
         </span>
 
-        <div
-          class=" grid grid-flow-col md:grid-cols-3 grid-cols-1 md:grid-rows-2  grid-rows-6  gap-8 my-10 z-10 mt-16"
-          // class="md:w-5/6 grid grid-flow-col md:grid-cols-3 grid-cols-1 md:grid-rows-2  grid-rows-6  gap-10 my-10 absolute"
-          // style={{ top: "990px" }}
-        >
+        <div class=" grid grid-flow-col md:grid-cols-3 grid-cols-1 md:grid-rows-2  grid-rows-6  gap-8 my-10 z-10 mt-16">
           <Card1 data={data} />
           <Card1 data={data} />
           <Card1 data={data} />
@@ -147,9 +120,6 @@ export default function Home({data}) {
           <Card1 data={data} />
           <Card1 data={data} />
         </div>
-        {/* <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-          <h1 className="text-5xl">Next.js</h1>
-        </main> */}
       </div>
     </div>
   );

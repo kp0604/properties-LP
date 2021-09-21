@@ -2,15 +2,33 @@ import Head from "next/head";
 import Card1 from "../comps/card1";
 import Card0 from "../comps/card0";
 import { server } from "../config"
+// import {HOST} from '../process.env'
+// import useSWR from "/next/swr";
 
-export const getStaticProps = async () => {
+// // const { data, error } = useSWR("/api/index", fetcher);
+// function Profile() {
+
+//   if (error) return <div>failed to load</div>;
+//   if (!data) return <div>loading...</div>;
+//   return <div>hello {data.name}!</div>;
+// }
+
+// export const getStaticProps = async () => {
+//   const res = await fetch('/api/');
+//   const data = await res.json();
+//   console.log(data);
+  
+//   return { props: { data } };
+// };
+export const getServerSideProps = async () => {
   const res = await fetch(`${server}/api/hello`);
   const data = await res.json();
   console.log(data);
+  
   return { props: { data } };
 };
 
-export default function Home({ data }) {
+export default function Home({data}) {
   return (
     <div
       className="flex flex-col bg-gray-200 items-center relative "

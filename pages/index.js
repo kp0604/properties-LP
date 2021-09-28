@@ -26,21 +26,24 @@ export default function Home({ data }) {
         className="bg-teal w-screen absolute inset-0"
         style={{ height: "550px" }}
       ></div>
+
       <span
-        className="text-white text-2xl font-bold md:top-16 md:-left-5 top-5
-      -left-24 absolute"
+        className="text-white text-5xl font-bold md:top-16 top-5
+       absolute"
       >
         Properties-LP
       </span>
+
+
       <div className="container md:px-16 px-6 flex flex-col md:mt-52 mt-36">
-        <span className="text-white md:text-5xl text-4xl  z-10 font-bold">
+        <span className="text-white md:text-4xl text-2xl  z-10 font-bold">
           All properties
         </span>
 
         <Card0 data={data} />
 
         <span
-          className="text-black md:text-6xl text-4xl  z-10 mt-14 font-bold"
+          className="text-black md:text-4xl text-2xl  z-10 mt-14 font-bold"
           style={{ fontFamily: "THICCCBOI-regular" }}
         >
           Past properties

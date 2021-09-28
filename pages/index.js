@@ -26,11 +26,12 @@ export default function Home({ data }) {
         className="bg-teal w-screen absolute inset-0"
         style={{ height: "550px" }}
       ></div>
-
-        <span className="text-white md:text-5xl text-4xl  z-10 font-bold">
-          Properties-LP
-        </span>
-      
+      <span
+        className="text-white text-2xl font-bold md:top-16 md:-left-5 top-5
+      -left-24 absolute"
+      >
+        Properties-LP
+      </span>
       <div className="container md:px-16 px-6 flex flex-col md:mt-52 mt-36">
         <span className="text-white md:text-5xl text-4xl  z-10 font-bold">
           All properties
